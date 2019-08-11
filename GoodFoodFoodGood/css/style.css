@@ -1,0 +1,339 @@
+*:focus {
+  outline: none; }
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+a{
+  color: #ffbb00;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: 
+}
+
+ul{
+    margin-top: -51px;
+}
+
+li{
+  cursor: context-menu; 
+  list-style: none;
+  color: #ffbb00;
+  font-size: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  padding: 10px;
+}
+
+p{
+  color: #11d10a;
+  font-size: 28px; 
+}
+
+
+/* ABERTURA DO WEBDOC */
+#divLogo{
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.imagemCentrada{
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.imagemCentradaBaixo{
+  margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.botaoCentrado{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 43%;
+}
+
+#botaoDeEntrada{
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+
+/* MENU INICIAL */
+#home{
+  display: none;
+}
+
+#cabecalho{
+  display:none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #418905;
+}
+
+header .menu{
+  order:3;
+  margin-right: 0.5vw;
+}
+
+header .titulo{
+  margin-left: 0.5vw;
+}
+
+header .tituloSubmenuTopo{
+  align-self: center;
+}
+
+/* CONTAINER DOS VÍDEOS */
+.containerVideoPlyr {
+  margin: 0px auto;
+  max-width: 77%;
+}
+.plyr__video-embed iframe {
+    top: -50%;
+    height: 200%;
+}
+.videoContainer{
+  display:none;
+}
+
+/* SUBMENUS */
+#submenuEfeitos, #submenuRepense, #submenuDesafios, #submenuIniciativas{
+  display:none;
+}
+
+.fecharContainer{
+  position: absolute;
+  right: 0.5vw;
+  top: 70px;
+  z-index: 3;
+}
+
+/* MENU HAMBURGUER */
+#menuprafechar{
+  display:none;
+  position: absolute;
+  right:0;
+  top:0;
+  margin-right: 0.5vw;
+  margin-top:1vw;
+}
+
+#overlayMenu{
+  background-color: rgba(0, 0, 0 , 0.9);
+  position: fixed;
+  top: 0;
+  margin-top: 51px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  text-align: center;
+}
+
+.submenuHamburger{
+  display:none;
+  width: 60%;
+  margin-top: -51px;
+}
+
+.hamburgerTitulo{
+  color: #ffbb00;
+  font-size: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.hamburgerCorpo > p {
+   color: #ffbb00;
+  font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-align: justify;
+}
+
+
+/* SUBMENU PRODUÇÃO */
+#producaoCorpo{  
+  display:flex;
+  justify-content: center;
+}
+
+.textoImagens{
+  display:none;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  padding:8px;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+}
+
+.textoImagens > p{
+  color: #ffbb00;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+
+/* ESTRUTURA FLEXBOX DOS MENUS */
+.container{
+  flex:auto;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  justify-content: center;
+  z-index: 1;
+}
+
+.wrapper{
+  position: relative;
+}
+
+.coluna{
+  width: 100%;
+  height: auto;
+}
+
+.titulosMenus{
+  justify-content: center;
+  display: flex;
+  color: #ffbb00;
+  font-size: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15%;
+  text-align: center;
+}
+
+/* TITULOS NO CABEÇALHO*/
+.tituloSubmenuTopo{
+  display:none;
+  color: #418905;
+  font-size: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+/*OVERLAY VERDE SOBRE OS MENUS CLICADOS*/
+.overlayVerde:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  background-color: rgba(17,209,10,0.2);
+}
+
+
+/*SUBMENU - FOME*/
+#fomeSubmenu, #ambienteSubmenu, #industriaSubmenu, #casaSubmenu, #segurancaSubmenu1, #segurancaSubmenu2, #nutricaoSubmenu1, #nutricaoSubmenu2, #mentalidadeSubmenu1, #mentalidadeSubmenu2{
+  display:none;
+}
+
+.SubmenuWrapper{
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.5fr 2fr 1fr;
+  grid-column-gap: 2em;
+  justify-content: center;
+  margin-top: 2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+}
+
+.maior{
+  color: #ffbb00;
+  font-size: 42px;
+}
+
+.margemMenorBaixo{
+  margin-bottom: -25px;
+}
+
+.margemMenorCimaBaixo{
+   margin-top: -25px;
+  margin-bottom: -25px;
+}
+.galeryimage {
+  object-fit: cover;
+  width: 100%;
+}
+
+.quote{
+  margin-top: 2.5em;
+}
+
+
+/*SUBMENU DESAFIOS*/
+.SubmenuWrapperDesafios{
+  display: grid;
+  grid-template-columns: 1fr 4.5fr 1fr;
+  grid-column-gap: 2em;
+  justify-content: center;
+  margin-top: 2em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  align-items: center;
+  text-align:justify;
+}
+
+.submenusDosDesafios{
+  height: 100%;
+  margin-top:-70px;
+}
+
+.seta{
+  align-items: center;
+  justify-self:end;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
